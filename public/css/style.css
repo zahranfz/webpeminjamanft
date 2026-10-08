@@ -1,0 +1,1174 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================================================
+   STITCH DESIGN SYSTEM - FT UNSOED ROOM MANAGEMENT
+   Tokens extracted from Stitch Project: 16317421432685686596
+   ========================================================================== */
+
+:root {
+  /* Stitch Primary Brand (Unsoed Navy) */
+  --primary: #001e40;
+  --primary-container: #003366;
+  --primary-light: #1f477b;
+  --primary-fixed: #d5e3ff;
+  --primary-fixed-dim: #a7c8ff;
+  --on-primary: #ffffff;
+  --on-primary-container: #799dd6;
+
+  /* Stitch Secondary Brand (Unsoed Gold/Yellow) */
+  --secondary: #7c5800;
+  --secondary-container: #feb700;
+  --secondary-light: #ffdea8;
+  --secondary-dark: #d97706;
+  --on-secondary: #ffffff;
+  --on-secondary-container: #6b4b00;
+
+  /* Surfaces & Canvas */
+  --bg-color: #f8f9ff;
+  --surface: #ffffff;
+  --surface-ground: #f8f9ff;
+  --surface-container-low: #eff4ff;
+  --surface-container: #e5eeff;
+  --surface-container-high: #dce9ff;
+  --surface-container-highest: #d3e4fe;
+  --surface-dim: #cbdbf5;
+
+  /* Typography & High-emphasis Text */
+  --text-main: #0b1c30;
+  --text-muted: #64748b;
+  --on-surface: #0b1c30;
+  --on-surface-variant: #43474f;
+
+  /* Borders & Outlines */
+  --border: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --outline: #737780;
+  --outline-variant: #c3c6d1;
+
+  /* Status Colors */
+  --success: #047857;
+  --success-light: #ecfdf5;
+  --success-border: #a7f3d0;
+  --warning: #b45309;
+  --warning-light: #fffbeb;
+  --warning-border: #fde68a;
+  --danger: #be123c;
+  --danger-light: #fff1f2;
+  --danger-border: #fecdd3;
+  --info: #0284c7;
+  --info-light: #f0f9ff;
+  --info-border: #bae6fd;
+
+  /* Shapes & Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.03);
+  --shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-card: 0 4px 12px rgba(0, 51, 102, 0.05), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 12px 24px -4px rgba(0, 51, 102, 0.12), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
+  --shadow-elevated: 0 20px 30px -8px rgba(0, 51, 102, 0.16);
+
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--surface-ground);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+/* ==========================================================================
+   TOP ANNOUNCEMENT BAR
+   ========================================================================== */
+.stitch-topbar {
+  background-color: #00142e;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.775rem;
+  padding: 0.45rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stitch-topbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stitch-topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stitch-topbar-item .dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--secondary-container);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+.navbar {
+  background-color: var(--surface);
+  padding: 0.85rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 51, 102, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-emblem {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-container));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 30, 64, 0.2);
+  border: 1px solid rgba(254, 183, 0, 0.4);
+}
+
+.brand-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary-container);
+  background-color: var(--surface-container);
+}
+
+.nav-link.active {
+  color: var(--primary-container);
+  background-color: var(--surface-container);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn {
+  padding: 0.65rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-container), var(--primary));
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 51, 102, 0.15);
+}
+
+.btn-primary:hover {
+  background: var(--primary);
+  box-shadow: 0 4px 8px rgba(0, 51, 102, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-container);
+  color: #171c20;
+  font-weight: 700;
+}
+
+.btn-secondary:hover {
+  background-color: #e5a500;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-container);
+  color: var(--primary-container);
+  background-color: var(--surface-container-low);
+}
+
+.btn-warning {
+  background-color: var(--warning-light);
+  color: var(--warning);
+  border: 1px solid var(--warning-border);
+}
+
+.btn-warning:hover {
+  background-color: #fef08a;
+}
+
+.btn-danger {
+  background-color: var(--danger-light);
+  color: var(--danger);
+  border: 1px solid var(--danger-border);
+}
+
+.btn-sm {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   STATUS BADGES & CHIPS
+   ========================================================================== */
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.status-chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-available, .status-kosong {
+  background-color: var(--success-light);
+  color: var(--success);
+  border: 1px solid var(--success-border);
+}
+.status-available .status-chip-dot, .status-kosong .status-chip-dot {
+  background-color: var(--success);
+}
+
+.status-occupied, .status-terpakai {
+  background-color: var(--warning-light);
+  color: var(--warning);
+  border: 1px solid var(--warning-border);
+}
+.status-occupied .status-chip-dot, .status-terpakai .status-chip-dot {
+  background-color: var(--warning);
+}
+
+.status-maintenance {
+  background-color: var(--danger-light);
+  color: var(--danger);
+  border: 1px solid var(--danger-border);
+}
+.status-maintenance .status-chip-dot {
+  background-color: var(--danger);
+}
+
+.status-special, .status-scheduled {
+  background-color: var(--info-light);
+  color: var(--info);
+  border: 1px solid var(--info-border);
+}
+.status-special .status-chip-dot, .status-scheduled .status-chip-dot {
+  background-color: var(--info);
+}
+
+/* ==========================================================================
+   HERO SECTION (Screen 1)
+   ========================================================================== */
+.stitch-hero {
+  background: linear-gradient(145deg, #001633 0%, #00224a 50%, #003366 100%);
+  color: #ffffff;
+  padding: 3.5rem 1.5rem 4.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.stitch-hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(circle at 80% 20%, rgba(254, 183, 0, 0.12) 0%, transparent 40%),
+                    radial-gradient(circle at 10% 80%, rgba(121, 157, 214, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.stitch-hero-content {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.stitch-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffdea8;
+  margin-bottom: 1.5rem;
+}
+
+.stitch-hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secondary-container);
+}
+
+.stitch-hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+}
+
+.stitch-hero-title span {
+  color: var(--secondary-container);
+}
+
+.stitch-hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Elevated Search Card in Hero */
+.stitch-search-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: 0 20px 40px rgba(0, 15, 35, 0.35);
+  text-align: left;
+  color: var(--text-main);
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.stitch-category-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+  overflow-x: auto;
+}
+
+.stitch-category-tab {
+  background: transparent;
+  border: none;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--transition);
+}
+
+.stitch-category-tab.active {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.stitch-category-tab:hover:not(.active) {
+  background-color: var(--surface-container);
+  color: var(--primary);
+}
+
+.stitch-search-inputs {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.stitch-input-wrap {
+  position: relative;
+}
+
+.stitch-input-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.stitch-input {
+  width: 100%;
+  padding: 0.75rem 0.85rem 0.75rem 2.4rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.875rem;
+  outline: none;
+  background-color: #ffffff;
+  transition: var(--transition);
+}
+
+.stitch-input:focus {
+  border-color: var(--primary-container);
+  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+.stitch-select {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.875rem;
+  background-color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.stitch-select:focus {
+  border-color: var(--primary-container);
+}
+
+.stitch-popular-tags {
+  margin-top: 0.75rem;
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.stitch-popular-tag {
+  background-color: var(--surface-ground);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  color: var(--primary-container);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.stitch-popular-tag:hover {
+  background-color: var(--surface-container);
+}
+
+/* KPI Stats Bar */
+.stitch-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stitch-kpi-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: left;
+}
+
+.stitch-kpi-num {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.stitch-kpi-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stitch-kpi-label {
+  font-size: 0.775rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   ROOM CARDS (Screens 1 & 3)
+   ========================================================================== */
+.stitch-room-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.stitch-room-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: #cbd5e1;
+}
+
+.stitch-room-thumbnail {
+  position: relative;
+  height: 160px;
+  background-color: var(--primary);
+  overflow: hidden;
+}
+
+.stitch-room-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.stitch-room-card:hover .stitch-room-thumbnail img {
+  transform: scale(1.03);
+}
+
+.stitch-thumbnail-tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(0, 30, 64, 0.85);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.stitch-room-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.stitch-room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stitch-room-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.3;
+}
+
+.stitch-room-location {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.stitch-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem 0.75rem;
+  background: var(--surface-ground);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius);
+  font-size: 0.775rem;
+  margin-bottom: 1rem;
+}
+
+.stitch-spec-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+}
+
+.stitch-spec-item strong {
+  color: var(--text-main);
+}
+
+.stitch-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   WORKFLOW 4-STEP CARDS (Screen 1)
+   ========================================================================== */
+.stitch-workflow {
+  padding: 4rem 1.5rem;
+  background-color: #ffffff;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stitch-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
+.stitch-section-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.stitch-section-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.stitch-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stitch-step-card {
+  background: var(--surface-ground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: var(--transition);
+}
+
+.stitch-step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary-fixed-dim);
+}
+
+.stitch-step-num {
+  width: 36px;
+  height: 36px;
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.stitch-step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.stitch-step-desc {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   FOOTER (Screen 1 & 2)
+   ========================================================================== */
+.stitch-footer {
+  background-color: #001328;
+  color: #ffffff;
+  padding: 3.5rem 2rem 1.5rem;
+}
+
+.stitch-footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.stitch-footer-brand-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+}
+
+.stitch-footer-brand-sub {
+  font-size: 0.75rem;
+  color: var(--secondary-container);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stitch-footer-desc {
+  font-size: 0.825rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.stitch-footer-address {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+}
+
+.stitch-footer-heading {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stitch-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.stitch-footer-link {
+  font-size: 0.825rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+}
+
+.stitch-footer-link:hover {
+  color: var(--secondary-container);
+  padding-left: 4px;
+}
+
+.stitch-contact-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stitch-contact-title {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+.stitch-contact-time {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.stitch-footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================================================
+   DETAIL RUANGAN (Screen 2)
+   ========================================================================== */
+.stitch-notice-banner {
+  background-color: var(--warning-light);
+  border: 1px solid var(--warning-border);
+  border-radius: var(--radius);
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stitch-notice-text {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--warning);
+}
+
+.stitch-room-hero-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+}
+
+.stitch-specs-4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background: var(--surface-ground);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  margin: 1.25rem 0;
+  border: 1px solid var(--border);
+}
+
+.stitch-spec-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stitch-spec-box-label {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.stitch-spec-box-val {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stitch-laboran-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.stitch-laboran-info {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.stitch-avatar-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface-container);
+  color: var(--primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+/* Timeline schedule slot on detail page */
+.stitch-timeline-slot {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: var(--transition);
+}
+
+.stitch-timeline-slot.vacant {
+  background-color: var(--success-light);
+  border-color: var(--success-border);
+}
+
+.stitch-timeline-slot.ongoing {
+  background-color: var(--surface-container);
+  border-color: var(--primary-fixed-dim);
+}
+
+/* ==========================================================================
+   ADMIN DASHBOARD (Screen 5)
+   ========================================================================== */
+.stitch-admin-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stitch-admin-kpi-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stitch-admin-kpi-num {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+  margin: 0.35rem 0;
+}
+
+/* General Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Room Grid Layout */
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 30, 64, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-container {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 600px;
+  box-shadow: var(--shadow-elevated);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.modal-close-btn:hover {
+  background: var(--surface-container);
+  color: var(--danger);
+}
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.modal-footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  background: var(--surface-ground);
+}
+
+/* Responsive queries */
+@media (max-width: 1024px) {
+  .room-grid {
+    grid-template-columns: 1fr;
+  }
+  .stitch-search-inputs {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stitch-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stitch-workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stitch-footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stitch-admin-kpi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stitch-search-inputs {
+    grid-template-columns: 1fr;
+  }
+  .stitch-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+  .stitch-workflow-grid {
+    grid-template-columns: 1fr;
+  }
+  .stitch-footer-inner {
+    grid-template-columns: 1fr;
+  }
+  .stitch-admin-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+  .stitch-specs-4col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
