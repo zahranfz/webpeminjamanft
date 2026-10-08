@@ -1,0 +1,49 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and Editor Directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Log files
+*.log
+logs/
+
+# Temporary and Cache files
+.tmp/
+.cache/
+temp/
+tests/test_cookie.txt
+
+# Composer (jika nanti digunakan)
+vendor/
+composer.lock
+
+# File Konfigurasi Lokal (Abaikan agar kredensial database tidak ikut ter-push)
+# Gunakan config.example.php sebagai template
+config/config.php
+
+# Uploads / Media (jika ada folder upload dinamis)
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Environment variables
+.env
+.env.local
+
+# NPM / Frontend dependencies (jika nanti digunakan)
+node_modules/
+npm-debug.log*
+yarn-error.log*
